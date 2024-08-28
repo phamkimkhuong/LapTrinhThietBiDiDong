@@ -12,4 +12,4 @@ var value = firstArr.reduce((a, b) => {
     return a + b;
 });
 
-console.log(value); // 240
+console.log(value); // 18

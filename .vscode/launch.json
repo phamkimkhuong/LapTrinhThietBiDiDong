@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Tuan02\\Reduce_rewrite.js"
+            "program": "${workspaceFolder}\\Tuan02\\Some_rewrite.js"
         }
     ]
 }
