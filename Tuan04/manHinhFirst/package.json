@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "images/avatar_user.png": "*",
-    "images": "3.2.4",
-    "images/Group.png": "*",
-    "images/eye.png": "*"
-  }
-}
