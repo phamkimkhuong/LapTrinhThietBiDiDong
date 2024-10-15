@@ -1,11 +1,30 @@
-import { View, Text, StyleSheet, Image, Button } from "react-native";
-import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { View, Text, StyleSheet, Image, Button, Pressable } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  useNavigation,
+  NavigationProp,
+  useRoute,
+  RouteProp,
+} from "@react-navigation/native";
+import { ScreenList } from "../const";
+
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+  var url = require("../assets/vs_blue.png");
+  // if (route.params?.url) {
+  url = route.params;
+  // }
+  // // get url from Screen2.tsx form useState
+  // useEffect(() => {
+  //   if (route.params) {
+  //     setUrl(route.params);
+  //   }
+  // }, [route.params]);
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/vs_blue.png")} />
+      <Text>{url} a</Text>
+      <Image source={url} />
       <Text style={{ fontSize: 18 }}>
         Điện thoại Vsmart Joy 3 - Hàng chính hãng
       </Text>
@@ -38,7 +57,12 @@ const HomeScreen = () => {
           <Image source={require("../assets/Group 1.png")} />
         </View>
         <View style={{ width: "100%", marginTop: 10 }}>
-          <Button title="4 MÀU-CHỌN MÀU" />
+          <Pressable
+            style={styles.btn}
+            onPress={() => navigation.navigate("Screen2")}
+          >
+            <Text style={{ color: "black" }}>CHỌN 4 MÀU</Text>
+          </Pressable>
           <Image
             style={styles.image}
             source={require("../assets/Vector.png")}
@@ -77,6 +101,13 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 10,
     top: 10,
+  },
+  btn: {
+    backgroundColor: "white",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
   },
 });
 export default HomeScreen;
