@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../DeTai"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
